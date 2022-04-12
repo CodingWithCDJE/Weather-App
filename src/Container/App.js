@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import WeatherDisplay from '../Components/WeatherDisplay';
+import weather from '../Api/weather';
+import '../Css/App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      weatherResults: [],
+      results: [],
     };
+    this.onSearchSubmit = this.onSearchSubmit.bind(this);
+  }
+
+  async onSearchSubmit(term) {
+    const response = await weather.get('/current.json', {
+      params: {
+        key: process.env.REACT_APP_WEATHER_API,
+        q: term,
+      },
+    });
+    console.log(response.data);
+    this.setState({ results: response.data });
   }
 
   render() {
+    const { results } = this.state;
     return (
-      <div>
-        <SearchBar />
-        <WeatherDisplay />
+      <div className='app-main-container'>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+        <WeatherDisplay results={results} />
       </div>
     );
   }

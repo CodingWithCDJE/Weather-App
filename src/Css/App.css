@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+}
+
+.app-main-container {
+  background: linear-gradient(to left, #957fef, #dec0f1, #efd9ce);
+  min-height: 100vh;
+}
