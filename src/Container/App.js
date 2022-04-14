@@ -16,12 +16,12 @@ class App extends Component {
   async onSearchSubmit(term) {
     const response = await weather.get('/forecast.json', {
       params: {
-        key: VERCEL_ENV_REACT_APP_WEATHER_API,
+        key: process.env.REACT_APP_WEATHER_API,
         q: term,
         days: 3,
       },
     });
-    console.log(key);
+    console.log();
     this.setState({ results: response.data });
   }
 
