@@ -21,7 +21,7 @@ class App extends Component {
         days: 3,
       },
     });
-    console.log(response);
+    console.log(key);
     this.setState({ results: response.data });
   }
 
