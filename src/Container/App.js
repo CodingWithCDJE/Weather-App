@@ -14,13 +14,14 @@ class App extends Component {
   }
 
   async onSearchSubmit(term) {
-    const response = await weather.get('/current.json', {
+    const response = await weather.get('/forecast.json', {
       params: {
         key: process.env.REACT_APP_WEATHER_API,
         q: term,
+        days: 3,
       },
     });
-    console.log(response.data);
+    console.log(response);
     this.setState({ results: response.data });
   }
 
