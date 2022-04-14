@@ -31,7 +31,7 @@ class SearchBar extends Component {
               onChange={(event) =>
                 this.setState({ stateTerm: event.target.value })
               }
-              placeholder='Search City or Zip Code'
+              placeholder='Search by City or Zip Code'
             />
             <input type='submit' className='searchbar-input-submit' />
           </div>

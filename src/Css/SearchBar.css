@@ -21,6 +21,7 @@
   border: 1px solid black;
   border-radius: 30px;
   box-shadow: 1px 3px 10px;
+  background-color: white;
 }
 
 /* Label */
@@ -47,4 +48,9 @@
   text-align: center;
   font-weight: 900;
   color: black;
+}
+
+.searchbar-input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #048a81;
 }
