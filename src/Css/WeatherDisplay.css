@@ -57,7 +57,6 @@
 }
 
 .weatherdisplay-temperature {
-  padding-top: 0.5vh;
   font-size: 3.5vh;
 }
 
@@ -75,12 +74,12 @@
 
 .weatherdisplay-high {
   padding: 0.5vh;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 .weatherdisplay-low {
   padding: 0.5vh;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 .weatherdisplay-bottom-container {
