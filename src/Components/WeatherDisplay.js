@@ -2,8 +2,6 @@ import '../Css/WeatherDisplay.css';
 
 const WeatherDisplay = ({ results }) => {
   const todayDate = new Date().toLocaleString('en-US');
-  const tomorrowDate = '';
-  const dayAfterTomorrow = '';
 
   return results.length !== 0 ? (
     <div className='weatherdisplay-main-container'>
@@ -55,7 +53,10 @@ const WeatherDisplay = ({ results }) => {
           <span>Today</span>
 
           <span>
-            <img src={results.forecast.forecastday[0].day.condition.icon} />
+            <img
+              src={results.forecast.forecastday[0].day.condition.icon}
+              alt={results.forecast.forecastday[0].day.condition.text}
+            />
           </span>
 
           <span>
@@ -74,7 +75,10 @@ const WeatherDisplay = ({ results }) => {
           </span>
 
           <span>
-            <img src={results.forecast.forecastday[1].day.condition.icon} />
+            <img
+              src={results.forecast.forecastday[1].day.condition.icon}
+              alt={results.forecast.forecastday[1].day.condition.text}
+            />
           </span>
 
           <span>
@@ -94,7 +98,10 @@ const WeatherDisplay = ({ results }) => {
           </span>
 
           <span>
-            <img src={results.forecast.forecastday[2].day.condition.icon} />
+            <img
+              src={results.forecast.forecastday[2].day.condition.icon}
+              alt={results.forecast.forecastday[2].day.condition.text}
+            />
           </span>
 
           <span>
