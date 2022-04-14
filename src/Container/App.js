@@ -16,7 +16,7 @@ class App extends Component {
   async onSearchSubmit(term) {
     const response = await weather.get('/forecast.json', {
       params: {
-        key: process.env.REACT_APP_WEATHER_API,
+        key: VERCEL_ENV_REACT_APP_WEATHER_API,
         q: term,
         days: 3,
       },
