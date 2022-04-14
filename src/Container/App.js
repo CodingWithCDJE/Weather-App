@@ -21,7 +21,7 @@ class App extends Component {
         days: 3,
       },
     });
-    console.log();
+    console.log(process.env.REACT_APP_WEATHER_API);
     this.setState({ results: response.data });
   }
 
