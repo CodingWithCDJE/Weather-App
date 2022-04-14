@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://api.weatherapi.com/v1',
+  baseURL: 'http://api.weatherapi.com/v1',
 });
