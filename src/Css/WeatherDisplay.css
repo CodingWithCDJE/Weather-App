@@ -40,7 +40,7 @@
 }
 
 .weatherdisplay-header {
-  font-size: 5vh;
+  font-size: 3vh;
   padding-top: 0.5vh;
   padding-bottom: 1vh;
   text-decoration: #fbfff1 underline wavy;
@@ -48,17 +48,17 @@
 
 .weatherdisplay-todaydate {
   font-weight: 700;
-  font-size: 2.5vh;
+  font-size: 2vh;
   padding: 0.5vh 1vh 1vh 1vh;
 }
 .weatherdisplay-location {
   padding: 0.5vh;
-  font-size: 4.5vh;
+  font-size: 3vh;
 }
 
 .weatherdisplay-temperature {
   padding-top: 0.5vh;
-  font-size: 4.5vh;
+  font-size: 3.5vh;
 }
 
 .weathercondition-img {
@@ -93,7 +93,7 @@
 
 /* .weatherdisplay-  */
 .weatherdisplay-bottom-container p {
-  font-size: 3vh;
+  font-size: 1.5vh;
   text-align: center;
   padding-right: 1vh;
   padding-left: 1vh;
