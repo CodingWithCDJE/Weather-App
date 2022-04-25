@@ -1,4 +1,5 @@
 import '../Css/WeatherDisplay.css';
+import moment from 'moment';
 
 const WeatherDisplay = ({ results }) => {
   const todayDate = new Date().toLocaleString('en-US');
@@ -9,7 +10,6 @@ const WeatherDisplay = ({ results }) => {
         <h1 className='weatherdisplay-header'>Today's Weather</h1>
         <p className='weatherdisplay-todaydate'>{todayDate.toString()}</p>
         <p className='weatherdisplay-location'>{results.location.name}</p>
-
         <p className='weatherdisplay-temperature'>
           {Math.ceil(results.current.temp_f)}°F
         </p>
@@ -67,11 +67,10 @@ const WeatherDisplay = ({ results }) => {
             H: {Math.ceil(results.forecast.forecastday[0].day.maxtemp_f)}°F
           </span>
         </div>
+
         <div className='weatherdisplay-tomorrow-forecast'>
           <span>
-            {new Date(
-              results.forecast.forecastday[1].date.split('-').sort().join('/')
-            ).toLocaleDateString('en-US', { weekday: 'long' })}
+            {moment(results.forecast.forecastday[1].date).format('dddd')}
           </span>
 
           <span>
@@ -92,9 +91,7 @@ const WeatherDisplay = ({ results }) => {
 
         <div className='weatherdisplay-dayAfterTomorrow-forecast'>
           <span>
-            {new Date(
-              results.forecast.forecastday[2].date.split('-').sort().join('/')
-            ).toLocaleDateString('en-US', { weekday: 'long' })}
+            {moment(results.forecast.forecastday[2].date).format('dddd')}
           </span>
 
           <span>
